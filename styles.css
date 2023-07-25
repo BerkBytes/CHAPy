@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#app {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+#sidebar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    width: 200px; /* fixed width */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#sidebar h3 {
+    margin: 0;
+}
+
+#sidebar button {
+    padding: 10px;
+    color: white;
+    background-color: #e00b16;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-overflow: ellipsis; /* ensures that the text doesn't overflow */
+    overflow: hidden; /* hides any text that doesn't fit in the button */
+    white-space: nowrap; /* prevents the text from wrapping to a new line */
+}
+
+#chat-window {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: calc(100% - 200px); /* subtracts the width of the sidebar */
+}
+
+#chat-content {
+    background-color: #fff;
+    padding: 10px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+#form {
+    display: flex;
+    background-color: #ddd;
+    padding: 10px;
+}
+
+#input-field {
+    flex-grow: 1;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    background-color: #e00b16;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
